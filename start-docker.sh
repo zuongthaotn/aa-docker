@@ -1,6 +1,9 @@
 #!/bin/bash
+#
+DOCKER_IMAGE="algo_analytics:v1.0"
+#
 cd src
-
+#
 if [ -d "ai-chungkhoan" ]; then
     echo "Updating ai-chungkhoan..."
     cd ai-chungkhoan && git pull && cd ..
@@ -26,12 +29,12 @@ else
 fi
 #
 cd ..
-
-if [ -z "$(docker images -q algo_analytics:v1.0 2> /dev/null)" ]; then
-    echo "Image algo_analytics:v1.0 does not exist. Building without cache..."
+#
+if [ -z "$(docker images -q $DOCKER_IMAGE 2> /dev/null)" ]; then
+    echo "Image $DOCKER_IMAGE does not exist. Building without cache..."
     docker compose build --no-cache
     docker compose up -d
 else
-    echo "Image algo_analytics:v1.0 exists. Starting containers..."
+    echo "Image $DOCKER_IMAGE exists. Starting containers..."
     docker compose up -d
 fi
