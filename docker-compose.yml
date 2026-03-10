@@ -1,0 +1,17 @@
+services:
+  algo_analytics:
+    image: algo_analytics:v1.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: algo_analytics
+    restart: "no"
+    ports:
+      - "8888:8888" 
+    volumes:
+      - ./src:/algo_analytics
+    networks:
+      - algo_net
+
+networks:
+  algo_net:
