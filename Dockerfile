@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y nano
 
 WORKDIR /algo_analytics
 
-COPY requirements.txt .
+COPY src/requirements.txt .
 
 RUN pip install -r requirements.txt
 
