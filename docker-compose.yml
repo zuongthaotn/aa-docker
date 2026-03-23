@@ -10,6 +10,8 @@ services:
       - "8888:8888" 
     volumes:
       - ./src:/algo_analytics
+      - ./scripts/entrypoint.sh:/entrypoint.sh
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
     networks:
       - algo_net
 
