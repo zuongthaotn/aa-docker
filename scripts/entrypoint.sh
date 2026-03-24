@@ -3,8 +3,8 @@
 set -e  # exit nếu có lỗi
 
 OHCLV_DATASET="/algo_analytics/vn-stock-data/VN30F1M/data_ohlcv/VN30F1M_5m.csv"
-ANALYTICS_DATASET="/algo_analytics/phantich-chungkhoan/VN30F1M/VN30F1M_5m_ready.csv"
-AI_DATASET="/algo_analytics/ai-chungkhoan/VN30F1M/VN30F1M_5m_ready.csv"
+ANALYTICS_DATASET="/algo_analytics/phantich-chungkhoan/VN30F1M/VN30F1M_5m_features.csv"
+AI_DATASET="/algo_analytics/ai-chungkhoan/VN30F1M/VN30F1M_5m_features.csv"
 
 echo "=== START DATA PREP ==="
 
